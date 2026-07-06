@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ActionTree - ActionTree and TimeVerse iOS apps</title>
+<meta name="description" content="This page provides more complete information about the ActionTree iOS app.">
+<meta property="og:title" content="ActionTree">
+<meta property="og:description" content="This page provides more complete information about the ActionTree iOS app. Please follow my Twitter account @markgoral to get update alerts/info.">
+<meta property="og:image" content="images/1429454814_1.png">
+<meta property="og:site_name" content="ActionTree and TimeVerse iOS apps">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">TimeVerse</a></li>
+      <li><a href="actiontree.html" class="active">ActionTree</a></li>
+      <li><a href="tutorial-videos.html">Tutorial Videos</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="contact.html">Support/Contact</a></li>
+    </ul>
+    <div class="nav-social">
+      Follow: <a href="https://twitter.com/MarkGoral" target="_blank" rel="noopener">@MarkGoral</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <a href="https://apps.apple.com/us/app/actiontree/id981751751" target="_blank" rel="noopener">
+      <img class="hero-icon" src="images/actiontree167x167_orig.png" alt="ActionTree app icon">
+    </a>
+    <h1>Welcome to the ActionTree app!</h1>
+    <p class="tagline">
+      A hierarchical project manager that breaks projects down into steps simple enough to accomplish easily,
+      with a built-in Timeline view of your reminders and events.
+    </p>
+    <a class="btn" href="https://apps.apple.com/us/app/actiontree/id981751751" target="_blank" rel="noopener">View on the App Store</a>
+  </section>
+
+  <section>
+    <div class="card">
+      <p>This page provides more complete information about the ActionTree iOS app. Please follow my Twitter account
+        <a href="https://twitter.com/MarkGoral" target="_blank" rel="noopener">@MarkGoral</a> to get update alerts/info.</p>
+      <p><em>It would be of great help to have your comments and suggestions — please use the <a href="contact.html">support page</a> to send me a message. If you like the app, please post a review in the App Store. Thanks!</em></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card status-card">
+      <h2>Status</h2>
+      <p class="meta">Site last updated: Dec/3/2025</p>
+      <p><strong>In App Store:</strong> 3.6 (64)</p>
+      <p>Bug fixes. Uploaded Ver 3.6.1 (65) — available in a day or 2. Fixes a bug that may prevent app launch.</p>
+      <p class="callout">I appreciate any feedback! Please use the support page to send email for support or comments.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Overview</h2>
+      <p>The app was written using Swift, Apple's programming language. It fills a void I felt in the productivity apps offered in the App Store.</p>
+      <p>The app supports iOS 8 and up, and all iPhones in portrait orientation. In the future I may add support for the iPad and Apple Watch, plus iPhone landscape orientation, and possibly iOS shortcuts (iOS 12) — please send a note about a particular shortcut you'd be interested in.</p>
+      <p>I was looking for something simple to manage projects by breaking them into steps until each step is simple enough to accomplish easily. This is the ActionTree Projects view, which enables hierarchical projects.</p>
+      <p>ActionTree also provides a Timeline view showing reminders and events on your device sorted by time. Reminders created in the Projects view are shown with a link in the Timeline view.</p>
+    </div>
+  </section>
+
+  <section class="toc">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#projects-view">The Projects view</a></li>
+      <li><a href="#projects-gestures">Projects view gestures</a></li>
+      <li><a href="#opml">OPML export &amp; import</a></li>
+      <li><a href="#timeline-view">The Timeline view</a></li>
+      <li><a href="#timeline-gestures">Timeline view gestures</a></li>
+      <li><a href="#edit-item">The Edit Item view</a></li>
+    </ul>
+  </section>
+
+  <section id="projects-view">
+    <div class="card">
+      <h2>The Projects view</h2>
+      <div class="screenshot-block">
+        <img src="images/1429027233_1.png" alt="The Projects view screenshot">
+        <div class="caption">
+          <p>The Projects view is a table. Each row represents a "project item," where the first line shows the item's title. A second line in smaller font (the "subtext"), if present, shows additional item info.</p>
+        </div>
+      </div>
+      <p>An item may have other items underneath it at a different "level." Those items are offset slightly to the right — one offset step per level. In that case the item is a "Parent" item, and the items underneath are "children" and "siblings." A child or sibling item may itself be a Parent.</p>
+      <p>A Parent item may be in a collapsed or expanded state, represented by the arrow just left of the item's text. The state is changed with a tap on the item's title.</p>
+      <p>An item at the very top of an item hierarchy is referred to as a "top item," usually used for project titles.</p>
+      <p><strong>What an item's subtext shows:</strong></p>
+      <ul>
+        <li>If the item has a note, the subtext line displays the first line of the note — whatever fits.</li>
+        <li>If the note is empty and the item has a reminder, the subtext displays the reminder's info.</li>
+        <li>If the item is a Parent and is collapsed, the subtext starts with (number of children)/(number of siblings).</li>
+        <li>The subtext color matches the title's color and reflects item status: pending/completed &rarr; black/gray (or white/gray in dark theme). When the subtext shows reminder info and the reminder is past due, the color turns red (orange in dark theme).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects-gestures">
+    <div class="card">
+      <h3>Projects view gestures</h3>
+      <ul>
+        <li>Switch to Timeline view — tap the Projects view title (by default, the current date).</li>
+        <li>Expand/collapse a parent item — tap on the item's title.</li>
+        <li>View or edit item details — quick swipe right on the item's title, taking you to the "Edit Item" view.</li>
+        <li>Toggle project item complete status — double tap on the item's check mark.</li>
+        <li>Add new item — tap the "+" top right to enter add-item edit mode, then tap one of the small green "+" icons. This takes you to the Edit Item view; set at least the title, then hit Done. Note: if the table is empty, hitting "+" takes you directly to Edit Item view.</li>
+        <li>Delete an item — tap "Edit" top left to enter delete mode, tap a red "&minus;" button, then tap Delete.</li>
+        <li>Promote/demote an item — enter add or delete mode, then swipe left/right on the item's text.</li>
+        <li>Move an item up or down — enter add or delete mode, then drag the item using the reorder symbol on the right.</li>
+        <li>Select an item — tap and hold for a moment.</li>
+      </ul>
+      <p><em>Note: The double-tap for the check box and swipe-right for Edit Item were chosen over a single tap to reduce accidental gestures.</em></p>
+      <p><strong>About the completion check box:</strong></p>
+      <ul>
+        <li>By default, a Parent item is marked complete automatically when all its siblings complete. Its check mark is colored gray. This can be changed via the Auto Complete switch (see Edit Item below).</li>
+        <li>A non-Parent item can be checked complete by the user. Its check mark is colored green.</li>
+        <li>The check box appears black if the item has no children, or all children are completed.</li>
+        <li>Marking an item complete also marks its reminder (if any) complete, and vice versa.</li>
+      </ul>
+      <p><strong>Item with reminder:</strong></p>
+      <ul>
+        <li>An item with a reminder is marked with an "R" to the right of the check box.</li>
+        <li>The color of the "R" reflects reminder status: future/completed/past due &rarr; black/gray/red. The completion status of the reminder generally matches the item, even if changed from another app.</li>
+      </ul>
+      <p>To move between the Timeline &amp; Projects view — tap the view title, in either view.</p>
+    </div>
+  </section>
+
+  <section id="opml">
+    <div class="card">
+      <h3>OPML export &amp; import</h3>
+      <p>ActionTree supports import and export of Projects items to/from OPML files. The related menu is under the extern button (Projects view bottom row, 3rd button from the right).</p>
+      <p>Please note:</p>
+      <ul>
+        <li>ActionTree imports the following XML attributes: text, note, priority, completed, and url. URL links are imported into the item's note.</li>
+        <li>ActionTree exports the following XML attributes: text, note, priority, completed.</li>
+        <li>The exported file is given the extension "xml." When prompted, specify the file name without the extension.</li>
+        <li>The import file list shows only files with the "xml" extension.</li>
+        <li>Imported file items are appended to the current content — there is no "overwrite" option at this time. Imported items are shown in their collapsed state.</li>
+        <li>To transfer a file to/from a PC, use iTunes file sharing: connect the device, launch iTunes, select your device, select "Apps" in the left column, then select ActionTree in the list of apps supporting file sharing. The right pane shows files available for export. Open the Finder — drag &amp; drop a file into the Finder's target directory to export, or reverse the drag &amp; drop to import.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="timeline-view">
+    <div class="card">
+      <h2>The Timeline view</h2>
+      <div class="screenshot-block">
+        <img src="images/5812259_1.png" alt="The Timeline view, dark theme">
+        <div class="caption">
+          <p><em>The Timeline view &mdash; dark theme</em></p>
+          <p>The Timeline view consists of 2 tables. Each row represents a reminder or event and shows its title, with a subtext line providing additional info.</p>
+        </div>
+      </div>
+      <ul>
+        <li>Pending reminders &amp; events — the undated reminders section is sorted by creation date; other sections are sorted by due/start dates.</li>
+        <li>Expired reminders/events are sorted by completion/start dates.</li>
+      </ul>
+      <p>ActionTree shows reminders and events in a time frame of &plusmn;2 years around the current date, plus all undated reminders.</p>
+      <p>Two different views are provided:</p>
+      <ul>
+        <li>The pending "Reminders &amp; Events" view shows pending reminders and events, including undated reminders in the collapsible top section. The Today section also includes overdue reminders, marked in red text.</li>
+        <li>The expired "Reminders &amp; Events" view shows completed reminders and past events.</li>
+      </ul>
+      <p>To switch between sections, tap the "Show Expired"/"Show Pending" button at the bottom.</p>
+      <p><strong>Symbols used:</strong></p>
+      <ul>
+        <li>The "&#8715;" symbol in a reminder's subtext means the reminder is associated with a Project item. To view it, go to the edit/view view and tap "Show in projects." A reminder is associated with a Project item when created from within the Edit Item view.</li>
+        <li>A location-based reminder is marked with a "&#9096;" symbol.</li>
+        <li>A small "N" on the item's right marks a note — tap the item to show or hide it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="timeline-gestures">
+    <div class="card">
+      <h3>Timeline view gestures</h3>
+      <ul>
+        <li>Switch to Projects view — tap the Timeline view title ("Reminders &amp; Events").</li>
+        <li>Edit an item — right swipe on the item.</li>
+        <li>Tap an item to show/hide its note (items with a note).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="edit-item">
+    <div class="card">
+      <h2>The Edit Item view</h2>
+      <div class="screenshot-block">
+        <img src="images/1429454814_1.png" alt="The Edit Item view, parent item">
+        <div class="caption">
+          <p><em>The Edit Item view (Parent item)</em></p>
+          <p>You enter this view with a right swipe on a Project item. Here you can edit the item's title, add/edit a note, add/edit a quick reminder, or add a photo. The note field detects links, addresses, and phone numbers — they appear in blue when not editing and can be tapped for the expected context.</p>
+        </div>
+      </div>
+      <p>The image shows the Edit Item view for a Parent item. For non-parent items, the Auto Complete switch doesn't apply and is hidden.</p>
+      <p><strong>To add a reminder:</strong> tap "Add reminder," scroll the date picker to select a date, then tap Done or the reminder info box.</p>
+      <p><strong>To add a photo:</strong> tap "Add photo." The first time, ActionTree will ask permission to access your photo album. Select a photo — tap the image to view it full size at the correct aspect ratio; you can also pinch to zoom or remove the photo.</p>
+      <p><strong>To dismiss the keyboard:</strong> swipe right in the note area. (A swipe-down gesture was removed in rev 1.1 (11) to fix interference with scrolling.)</p>
+      <p><strong>The Reminder actions button:</strong></p>
+      <ul>
+        <li><strong>Remove reminder:</strong> removes the reminder's association with the item; the reminder itself is not deleted and can still be viewed in Timeline.</li>
+        <li><strong>Show in Timeline:</strong> highlights and shows the reminder in the Timeline view. Swipe right takes you to the reminder editor.</li>
+        <li><strong>Attach Existing Reminder:</strong> ActionTree searches existing reminders for one matching the item's name (case insensitive) and associates it if found.</li>
+      </ul>
+      <p><strong>The Auto Complete switch:</strong></p>
+      <ul>
+        <li>On (default) — the item is marked complete automatically once all children complete. The check mark is colored gray to distinguish it from a manual completion.</li>
+        <li>Off — once all children complete, the check box turns black but the item stays unchecked; the user can then check it manually. Manually checked items show a green check mark.</li>
+        <li>This switch applies only to Parent items and is hidden for non-parents.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Mark Goral &mdash; ActionTree &amp; TimeVerse iOS apps &middot; <a href="https://twitter.com/MarkGoral" target="_blank" rel="noopener">@MarkGoral</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
